@@ -1,30 +1,20 @@
 {
     "name": "antidot-fw/cli",
-    "description": "Anti.Framework library",
+    "description": "Anti.Framework console line tool",
     "keywords": [
-        "psr-7",
-        "psr-11",
-        "psr-15"
+        "psr-11"
     ],
     "type": "library",
     "license": "BSD-2-Clause",
     "authors": [
         {
-            "name": "kpicaza",
-            "email": "kpicaza.sound@gmail.com"
+            "name": "kpicaza"
         }
     ],
     "require": {
         "php": "^7.2.13",
-        "aura/di": "^3.4",
-        "aura/router": "^3.1",
-        "psr/http-server-middleware": "^1.0",
-        "symfony/console": "^4.2",
-        "symfony/polyfill-php73": "^1.11",
-        "zendframework/zend-config": "^3.2",
-        "zendframework/zend-config-aggregator": "^1.1",
-        "zendframework/zend-diactoros": "2.1",
-        "zendframework/zend-httphandlerrunner": "^1.1"
+        "psr/container": "^1.0.0",
+        "symfony/console": "^4.2"
     },
     "require-dev": {
         "phpro/grumphp": "^0.15.0",
@@ -44,7 +34,7 @@
         }
     },
     "scripts": {
-        "check": [
+        "check-all": [
             "@cs-check",
             "@test",
             "@inspect"
