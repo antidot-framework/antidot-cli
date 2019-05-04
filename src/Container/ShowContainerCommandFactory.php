@@ -7,6 +7,12 @@ namespace Antidot\Cli\Container;
 use Antidot\Cli\Application\Command\ShowContainer;
 use Psr\Container\ContainerInterface;
 
+/**
+ * @deprecated will remove in version 1.0.0
+ *
+ * Class ShowContainerCommandFactory
+ * @package Antidot\Cli\Container
+ */
 class ShowContainerCommandFactory
 {
     public function __invoke(ContainerInterface $container): ShowContainer

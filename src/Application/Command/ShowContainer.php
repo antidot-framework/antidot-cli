@@ -11,6 +11,12 @@ use Symfony\Component\Console\Helper\TableSeparator;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+/**
+ * @deprecated will remove in version 1.0.0
+ *
+ * Class ShowContainer
+ * @package Antidot\Cli\Application\Command
+ */
 final class ShowContainer extends Command
 {
     public const NAME = 'config:show:container';
