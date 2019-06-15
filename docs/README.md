@@ -1,10 +1,5 @@
 # Antidot Framework Console Tool
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/antidot-framework/antidot-cli/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/antidot-framework/antidot-cli/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/antidot-framework/antidot-cli/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/antidot-framework/antidot-cli/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/antidot-framework/antidot-cli/badges/build.png?b=master)](https://scrutinizer-ci.com/g/antidot-framework/antidot-cli/build-status/master)
-[![Code Intelligence Status](https://scrutinizer-ci.com/g/antidot-framework/antidot-cli/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
-
 This library is an adapter for using the [Symfony Console component](https://symfony.com/doc/current/components/console.html) 
 using the standard Zend Framework configuration and any dependency injection container compatible with 
 the `Psr\ContainerInterface`
