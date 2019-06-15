@@ -15,10 +15,10 @@ class ConsoleFactory
 {
     public function __invoke(ContainerInterface $container): Console
     {
-        $config = $container->get('config');
+        $config = $container->get('config')['console'];
         /** @var Console $console */
         $console = new Console();
-        $commands = $container->get('config')['console']['commands'] ?? [];
+        $commands = $config['commands'] ?? [];
         $lazyCommands = [];
         foreach ($commands as $name => $command) {
             $lazyCommands[$name] = static function () use ($command, $container): Command {
@@ -27,7 +27,7 @@ class ConsoleFactory
         }
         $console->setCommandLoader(new FactoryCommandLoader($lazyCommands));
         array_walk(
-            $config['console']['helper-sets'],
+            $config['helper-sets'],
             static function (string $helperSet) use ($console, $container): void {
                 $console->setHelperSet($container->get($helperSet));
             }
