@@ -9,17 +9,20 @@ use Antidot\Cli\Container\ConsoleFactory;
 
 class ConfigProvider
 {
+    public const CONFIG = [
+        'console' => [
+            'helper-sets' => [],
+            'commands' => [],
+        ],
+        'dependencies' => [
+            'factories' => [
+                Console::class => ConsoleFactory::class,
+            ],
+        ],
+    ];
+
     public function __invoke(): array
     {
-        return [
-            'console' => [
-                'helper-sets' => [],
-                'dependencies' => [
-                    'factories' => [
-                        Console::class => ConsoleFactory::class,
-                    ],
-                ],
-            ],
-        ];
+        return self::CONFIG;
     }
 }
