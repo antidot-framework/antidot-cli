@@ -14,8 +14,7 @@ final class Console extends Application
     public const NAME = 'AntiDot Framework Console Tool';
     public const VERSION = '1.0.0';
 
-    /** @var InputInterface */
-    private $input;
+    private InputInterface $input;
 
     public function __construct(string $name = self::NAME, string $version = self::VERSION)
     {
