@@ -14,10 +14,8 @@ class ConfigProvider
             'helper-sets' => [],
             'commands' => [],
         ],
-        'dependencies' => [
-            'factories' => [
-                Console::class => ConsoleFactory::class,
-            ],
+        'factories' => [
+            Console::class => ConsoleFactory::class,
         ],
     ];
 
