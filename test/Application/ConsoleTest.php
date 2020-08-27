@@ -14,7 +14,7 @@ class ConsoleTest extends TestCase
     {
         $console = new Console();
         $this->assertInstanceOf(ArgvInput::class, $console->getInput());
-        $this->assertEquals(Console::NAME, $console->getName());
-        $this->assertEquals(Console::VERSION, $console->getVersion());
+        $this->assertSame(Console::NAME, $console->getName());
+        $this->assertSame(Console::VERSION, $console->getVersion());
     }
 }
