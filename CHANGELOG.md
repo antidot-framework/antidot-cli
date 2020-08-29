@@ -1,8 +1,19 @@
 # Changelog
 
-## [1.1.1](https://github.com/antidot-framework/antidot-cli/tree/HEAD)
+## [1.1.2](https://github.com/antidot-framework/antidot-cli/tree/1.1.2)
 
-[Full Changelog](https://github.com/antidot-framework/antidot-cli/compare/1.1.0...HEAD)
+[Full Changelog](https://github.com/antidot-framework/antidot-cli/compare/1.1.1...HEAD)
+
+**Merged pull requests:**
+
+- update phpunit configuration format [\#10](https://github.com/antidot-framework/antidot-cli/pull/10) ([kpicaza](https://github.com/kpicaza))
+- Update phpro/grumphp requirement from ^0.15.0 || ^0.19.0 to ^0.15.0 || ^0.19.0 || ^0.21.0 [\#9](https://github.com/antidot-framework/antidot-cli/pull/9) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Improve assertEquals to be assertSame [\#8](https://github.com/antidot-framework/antidot-cli/pull/8) ([peter279k](https://github.com/peter279k))
+- Update symfony/console requirement from ^4.2 to ^4.2 || ^5.0 [\#6](https://github.com/antidot-framework/antidot-cli/pull/6) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [1.1.1](https://github.com/antidot-framework/antidot-cli/tree/1.1.1) (2020-07-19)
+
+[Full Changelog](https://github.com/antidot-framework/antidot-cli/compare/1.1.0...1.1.1)
 
 **Merged pull requests:**
 
