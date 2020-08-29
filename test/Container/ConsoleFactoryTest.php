@@ -22,34 +22,34 @@ class ConsoleFactoryTest extends TestCase
     public function testItShouldCreateNewConsoleInstances(): void
     {
         $this->givenDependencyInjectionContainer();
-        $this->havingConsoleConfig();
-        $this->havingAConsoleCommand();
-        $this->havingAConsoleHelperSet();
         $this->whenConsoleFactoryIsInvoked();
         $this->thenItShouldHaveAnInstanceOfConsole();
     }
 
     private function givenDependencyInjectionContainer(): void
     {
+        $helper = $this->createMock(HelperSet::class);
+        $helper->method('get')->willReturn('question');
+        $command = $this->createMock(Command::class);
+        $command->method('getName')->willReturn('some:command');
         $this->container = $this->createMock(ContainerInterface::class);
-    }
-
-    private function havingConsoleConfig(): void
-    {
-        $this->container
-            ->expects($this->at(0))
+        $this->container->expects($this->exactly(3))
             ->method('get')
-            ->with('config')
-            ->willReturn([
-                'console' => [
-                    'commands' => [
-                        'some:command' => Command::class,
+            ->withConsecutive(['config'], [HelperSet::class], [Command::class])
+            ->willReturnOnConsecutiveCalls(
+                [
+                    'console' => [
+                        'commands' => [
+                            'some:command' => Command::class,
+                        ],
+                        'helper-sets' => [
+                            HelperSet::class,
+                        ]
                     ],
-                    'helper-sets' => [
-                        HelperSet::class,
-                    ]
                 ],
-            ]);
+                $helper,
+                $command
+            );
     }
 
     private function whenConsoleFactoryIsInvoked(): void
@@ -62,29 +62,5 @@ class ConsoleFactoryTest extends TestCase
     {
         $this->console->all();
         $this->assertInstanceOf(Console::class, $this->console);
-    }
-
-    private function havingAConsoleCommand(): void
-    {
-        $command = $this->createMock(Command::class);
-        $command->method('getName')->willReturn('some:command');
-
-        $this->container
-            ->expects($this->at(2))
-            ->method('get')
-            ->with(Command::class)
-            ->willReturn($command);
-    }
-
-    private function havingAConsoleHelperSet(): void
-    {
-        $helper = $this->createMock(HelperSet::class);
-        $helper->method('get')->willReturn('question');
-
-        $this->container
-            ->expects($this->at(1))
-            ->method('get')
-            ->with(HelperSet::class)
-            ->willReturn($helper);
     }
 }
