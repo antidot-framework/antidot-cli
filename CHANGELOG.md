@@ -1,8 +1,21 @@
 # Changelog
 
-## [1.1.2](https://github.com/antidot-framework/antidot-cli/tree/1.1.2)
+## [1.1.3](https://github.com/antidot-framework/antidot-cli/tree/1.1.3) (2021-01-10)
 
-[Full Changelog](https://github.com/antidot-framework/antidot-cli/compare/1.1.1...HEAD)
+[Full Changelog](https://github.com/antidot-framework/antidot-cli/compare/1.1.2...1.1.3)
+
+**Implemented enhancements:**
+
+- add php8 support [\#13](https://github.com/antidot-framework/antidot-cli/pull/13) ([kpicaza](https://github.com/kpicaza))
+
+**Merged pull requests:**
+
+- Update phpro/grumphp requirement from ~0.17 to ~0.17 || ~1.0 [\#12](https://github.com/antidot-framework/antidot-cli/pull/12) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update phpro/grumphp requirement from ^0.15.0 || ^0.19.0 || ^0.21.0 to ~0.17 [\#11](https://github.com/antidot-framework/antidot-cli/pull/11) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [1.1.2](https://github.com/antidot-framework/antidot-cli/tree/1.1.2) (2020-08-29)
+
+[Full Changelog](https://github.com/antidot-framework/antidot-cli/compare/1.1.1...1.1.2)
 
 **Merged pull requests:**
 
