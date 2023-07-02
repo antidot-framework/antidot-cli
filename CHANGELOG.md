@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.0](https://github.com/antidot-framework/antidot-cli/tree/2.0.0) (2023-07-02)
+
+[Full Changelog](https://github.com/antidot-framework/antidot-cli/compare/1.1.3...2.0.0)
+
+**Merged pull requests:**
+
+- require php \>= 8.1 [\#15](https://github.com/antidot-framework/antidot-cli/pull/15) ([kpicaza](https://github.com/kpicaza))
+
 ## [1.1.3](https://github.com/antidot-framework/antidot-cli/tree/1.1.3) (2021-01-10)
 
 [Full Changelog](https://github.com/antidot-framework/antidot-cli/compare/1.1.2...1.1.3)
