@@ -10,6 +10,7 @@ use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Helper\HelperInterface;
 use Symfony\Component\Console\Helper\HelperSet;
 
 class ConsoleFactoryTest extends TestCase
@@ -29,7 +30,7 @@ class ConsoleFactoryTest extends TestCase
     private function givenDependencyInjectionContainer(): void
     {
         $helper = $this->createMock(HelperSet::class);
-        $helper->method('get')->willReturn('question');
+        $helper->method('get')->willReturn($this->createMock(HelperInterface::class));
         $command = $this->createMock(Command::class);
         $command->method('getName')->willReturn('some:command');
         $this->container = $this->createMock(ContainerInterface::class);

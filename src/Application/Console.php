@@ -22,7 +22,7 @@ final class Console extends Application
         parent::__construct($name, $version);
     }
 
-    public function run(InputInterface $input = null, OutputInterface $output = null)
+    public function run(InputInterface $input = null, OutputInterface $output = null): int
     {
         return parent::run($input ?? $this->input, $output);
     }
