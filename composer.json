@@ -17,7 +17,7 @@
         "symfony/console": "^5.0 || ^6.0"
     },
     "require-dev": {
-        "phpro/grumphp": "~1.0",
+        "phpro/grumphp": "~1.0 || ~2.0",
         "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^9.0",
         "squizlabs/php_codesniffer": "^3.4",
